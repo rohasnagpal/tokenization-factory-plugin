@@ -29,11 +29,11 @@ Reply in a few lines:
 > {initial_supply} tokens created (maximum {maximum_supply}) · {transfer_mode} transfers · issuer powers: {enabled_powers or "none"}.
 > Asset type: {asset.category} → {asset.subcategory}. Verified by Sara on {deployment.deployed_at, date only}.
 
-Then offer the menu below. Recommend **Project document** first if the user has not made one, because the other skills draw on it.
+Then offer the menu below. Recommend **Project document** first if the user has not made one, because the other skills draw on it. Make clear that choosing it creates the complete first-draft legal-document pack immediately; missing issuer facts will be marked as open items and will not block creation.
 
 | # | Task | Skill |
 |---|---|---|
-| 1 | Create the project document: legal structure, holder rights, risks and sources, as one print-ready file | `project-document` |
+| 1 | Create the complete project legal-document pack now: legal structure, holder rights, risks, sources, schedules and TOC, as one print-ready file | `project-document` |
 | 2 | Plan how to bring in holders and approve their wallets | `holder-onboarding` |
 | 3 | Get the token seen: explorer profile, wallets, rwa.xyz, marketplaces | `listing-and-visibility` |
 | 4 | Launch posts, press note and holder FAQ, within what the law allows | `launch-kit` |
@@ -46,5 +46,7 @@ When the user chooses, run that skill and pass it the record. Each skill must:
 - prefill every on-chain fact from the record instead of asking for it;
 - cite the record as a source, for example "[Sara token record, retrieved {retrieved_at}]", and link `deployment.explorer` entries for on-chain claims;
 - use `asset.guide_url`, when present, as background reading on common structures for that asset type, not as advice about this project.
+
+For `project-document`, do not pause to ask for the project name, issuer details, intended readers or offering status. Run the skill immediately. It will place genuinely unknown matters in the relevant sections and completion schedule and can be revised when the issuer supplies them.
 
 If the user returns later with only "Hi Sara", ask for the record URL again rather than relying on memory, because supply and holders can change.

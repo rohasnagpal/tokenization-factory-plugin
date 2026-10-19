@@ -17,7 +17,7 @@ The link is your token's public Sara record. The skills read your token's on-cha
 | Skill | What it does |
 |---|---|
 | **hi-sara** | Say "Hi Sara" with your token link. Loads your token's record, summarises it and points you to the right skill. |
-| **project-document** | Interviews you and produces one consolidated, print-ready HTML project document: asset, issuer, token, legal structure, economics, controls, risks and sources. **Start here** — the other skills draw their facts from it. |
+| **project-document** | Immediately produces one consolidated, print-ready HTML legal-document pack with a linked TOC: asset, issuer, token, legal structure, holder rights, economics, controls, risks, sources and completion schedules. Missing facts are shown as open items and can be supplied for later revisions. **Start here** — the other skills draw their facts from it. |
 | **launch-kit** | Launch posts, threads, LinkedIn post, press note, one-page summary and holder FAQ — after first checking whether promotion is legally permitted. |
 | **listing-and-visibility** | Block explorer profile, wallet visibility, RWA data platforms such as rwa.xyz, marketplaces and trading options, matched to your token's transfer mode and legal position. |
 | **holder-onboarding** | Eligibility checklist, safe wallet collection, approving wallets in Sara, holder messages and register reconciliation. |

@@ -1,13 +1,13 @@
 ---
 name: project-document
-description: Interview a tokenization project owner and produce one consolidated, evidence-based, print-ready HTML project document covering the asset, issuer, token, legal structure, economics, controls, risks and source record. Use when someone has tokenized (or is about to tokenize) an asset with Sara Tokenization Factory and needs the project document, information memorandum or legal-review draft.
+description: Immediately produce and then refine one consolidated, evidence-based, print-ready HTML legal-document pack covering the asset, issuer, token, legal structure, economics, controls, risks and source record. Use when someone has tokenized (or is about to tokenize) an asset with Sara Tokenization Factory and needs the project document, information memorandum or legal-review draft.
 ---
 
 # Sara consolidated tokenization document
 
 This is the foundation skill of the Tokenization Factory plugin. The launch-kit, listing-and-visibility, holder-onboarding and holder-updates skills draw their facts from the finished document, so produce it first.
 
-Create one self-contained HTML file for a Sara Tokenization Factory project. The HTML is the only deliverable. It must be suitable for saving locally, opening in a modern browser, and printing to PDF on A4 or Letter paper with a table of contents and numbered pages.
+Create one self-contained HTML file for a Sara Tokenization Factory project. The HTML is the only deliverable. It is a consolidated legal-document pack: it must contain all applicable sections in the Required document structure, not merely a summary, questionnaire or list of requested information. It must be suitable for saving locally, opening in a modern browser, and printing to PDF on A4 or Letter paper with a table of contents and numbered pages.
 
 Do not create a collection of documents. Do not create Markdown, PDF, Word, CSS, JavaScript, image, or data files alongside the HTML. Embed all styles in the HTML.
 
@@ -31,6 +31,8 @@ If the user gives a Sara token record URL (`https://sarawallet.com/tokenize/toke
 7. Do not silently complete missing answers. Use a visible “Open item” box in the relevant section. Material open items must also appear in the executive summary and completion schedule.
 8. Avoid collecting unnecessary personal data. Mask identity numbers, bank details, private addresses, and confidential account information unless their full inclusion is required and the user expressly requests it.
 9. The document is a project record and drafting aid. It must not claim to be legal advice, an offering approval, an audit, a valuation, or proof of title.
+10. A lack of issuer-supplied facts is not a reason to withhold the document. Draft immediately from the available record, label unknown facts and unverified propositions precisely, and consolidate every material gap in the open-items and completion-conditions section.
+11. Do not respond to a request to create the project document with only questions, an intake checklist or an offer to create it later. The first substantive response must be the complete HTML draft required by this skill.
 
 ## Inputs
 
@@ -46,11 +48,22 @@ Accept any Sara project details supplied by the user, including:
 
 Validate internal consistency. Flag mismatched chains, wallet addresses, token supply figures, contract addresses, dates, or powers. Never modify a supplied on-chain fact merely to make the narrative consistent.
 
-## Interview method
+## Draft-first method
 
-First inspect all supplied material. Produce a short private gap list, then interview the user in manageable groups. Do not ask again for facts already established. Ask follow-up questions when an answer is ambiguous, internally inconsistent, legally material, or unsupported.
+First inspect all supplied material and create a private gap list. Then produce the complete first-draft HTML immediately. Do not make an interview, factual confirmation or further document upload a condition to drafting.
 
-Use this order:
+For every missing item:
+
+- use a specific label such as **Open item — issuer legal name and jurisdiction**, never invented text or a vague blank;
+- explain briefly why the item matters and what evidence or decision is required;
+- state the effect on the current legal or commercial analysis where material;
+- assign it a unique open-item ID and repeat it in section 20, Open items and completion conditions;
+- use neutral drafting that does not assume the missing answer; and
+- do not present alternative placeholder language as an agreed project term.
+
+Apply sensible document-control defaults only where they cannot mislead: status **Draft for legal review**, version **0.1**, document date equal to the current date, information cut-off **Information supplied as at [current date]**, confidentiality **To be confirmed**, and purpose/audience **To be confirmed**. Label these as drafting defaults, not issuer facts.
+
+Within the HTML, include a short **How to complete this draft** note that invites the user to supply missing information in manageable groups for a revised version. Because the HTML is the only deliverable, do not append questions outside it. Prioritise the completion requests in this order, without repeating facts already established:
 
 1. Purpose, intended audience and document status.
 2. Issuer, asset owner and other material parties.
@@ -63,7 +76,7 @@ Use this order:
 9. Risks, conflicts, defaults, disputes and contingency arrangements.
 10. Source register, open items and approvals.
 
-Before drafting, show the user a concise factual confirmation containing the material parties, asset, rights, supply, transfer controls, economics, jurisdictions, and unresolved matters. Correct the working record before producing the HTML.
+On a revision request, reconcile the supplied answers against the existing draft, flag conflicts, and return a complete replacement HTML file rather than a patch or a partial section.
 
 ## Core information to collect
 
@@ -283,7 +296,7 @@ Do not use a generic “compliant” conclusion. State the reviewed question, ju
 
 ## Required document structure
 
-The consolidated document must contain:
+The consolidated legal-document pack must contain the following parts and schedules, each listed in the table of contents. Even when information is missing, include the section with tailored drafting, identified limitations and cross-referenced open items. Do not output empty headings or reproduce the intake questions verbatim.
 
 1. Cover page.
 2. Document control and status.
@@ -331,6 +344,8 @@ Use source IDs in the body, such as “[S-03, clause 7.2]”. Hyperlink public s
 ## HTML output contract
 
 Return one complete HTML5 document beginning with `<!doctype html>`. Return no commentary before or after it.
+
+This output contract applies on the first request to create the document, including when only a Sara token record or sparse project facts are available. Never replace the HTML with a statement that issuer facts are required before creation.
 
 The file must:
 
@@ -391,6 +406,8 @@ Before returning the HTML:
 - confirm that every legal proposition has appropriate jurisdiction and support or is expressly marked for legal review;
 - confirm that no placeholder has been silently filled;
 - confirm that all material open items appear in the open-items schedule;
+- confirm that the response contains the complete HTML draft rather than an intake-only reply;
+- confirm that every required section is substantive or expressly marked inapplicable with reasons;
 - confirm that contract fields match the supplied Sara deployment facts;
 - confirm that every TOC link resolves to a unique section ID;
 - confirm that HTML tags are balanced and tables have headings;
