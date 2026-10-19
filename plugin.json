@@ -1,0 +1,48 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "tokenization-factory",
+  "version": "1.1.0",
+  "description": "Skills for issuers using Sara Tokenization Factory: project documentation, launch communications, listing and visibility, holder onboarding, and holder updates.",
+  "author": {
+    "name": "Sara DAO",
+    "url": "https://sarawallet.com/tokenize/"
+  },
+  "homepage": "https://sarawallet.com/tokenize/",
+  "repository": "https://github.com/rohasnagpal/tokenization-factory-plugin",
+  "license": "MIT",
+  "keywords": [
+    "tokenization",
+    "rwa",
+    "real-world-assets",
+    "erc20",
+    "sara"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Tokenization Factory",
+        "shortDescription": "Tokenization issuer workflows",
+        "longDescription": "Create evidence-based tokenization project documents, launch materials, listing and visibility plans, holder-onboarding workflows, and holder updates. Intended for issuers using Sara Tokenization Factory. Outputs are drafts and plans, not legal, tax, investment, audit, valuation, or offering advice.",
+        "developerName": "Sara DAO",
+        "category": "Finance",
+        "capabilities": [
+          "Draft tokenization documents",
+          "Plan holder onboarding",
+          "Prepare issuer communications"
+        ],
+        "websiteURL": "https://sarawallet.com/tokenize/",
+        "defaultPrompt": [
+          "Create the project document for my tokenized asset.",
+          "Assess promotion constraints and build a launch kit for my token.",
+          "Design a holder-onboarding workflow for my token."
+        ],
+        "brandColor": "#1F6B5C",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/logo.svg"
+      },
+      "publication": {
+        "release_notes": "Initial public release of five issuer workflows, with portable ChatGPT and Codex packaging and Claude Code marketplace support."
+      }
+    }
+  }
+}

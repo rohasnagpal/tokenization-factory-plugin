@@ -1,8 +1,8 @@
 {
   "name": "tokenization-factory",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Skills for issuers using Sara Tokenization Factory: project document, launch kit, listing and visibility plan, holder onboarding and holder updates.",
-  "author": { "name": "Sara AI LLC", "url": "https://sarawallet.com/tokenize/" },
+  "author": { "name": "Sara DAO", "url": "https://sarawallet.com/tokenize/" },
   "homepage": "https://sarawallet.com/tokenize/",
   "repository": "https://github.com/rohasnagpal/tokenization-factory-plugin",
   "license": "MIT",

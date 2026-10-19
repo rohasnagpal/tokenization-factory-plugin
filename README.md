@@ -1,6 +1,6 @@
-# Tokenization Factory skills
+# Tokenization Factory
 
-AI skills for issuers who create tokens with [Sara Tokenization Factory](https://sarawallet.com/tokenize/). They run in your own AI assistant (Claude Code, Codex, or any agent that reads `SKILL.md` files). Sara never sees your conversation.
+AI workflows for issuers using [Sara Tokenization Factory](https://sarawallet.com/tokenize/). The package supports ChatGPT and Codex as a portable Agent Plugin, Claude Code as a native plugin, and other assistants that read `SKILL.md` files.
 
 | Skill | What it does |
 |---|---|
@@ -10,38 +10,52 @@ AI skills for issuers who create tokens with [Sara Tokenization Factory](https:/
 | **holder-onboarding** | Eligibility checklist, safe wallet collection, approving wallets in Sara, holder messages and register reconciliation. |
 | **holder-updates** | Periodic updates, distribution notices, material-event notices and annual summaries. |
 
-## Install with one prompt
+## Install
 
-Paste this into your AI assistant:
+### ChatGPT
+
+After the plugin is published, open **Plugins** in ChatGPT, search for **Tokenization Factory**, and select **Install**. ChatGPT does not reliably install an arbitrary GitHub plugin from a normal chat prompt.
+
+### Codex or Claude Code — one prompt
+
+Paste this into a local Codex or Claude Code session:
 
 ```text
-Install the skills from https://github.com/rohasnagpal/tokenization-factory-plugin into your skills folder, then run the project-document skill for my tokenized asset.
+Install the Tokenization Factory plugin from https://github.com/rohasnagpal/tokenization-factory-plugin using this assistant's native plugin marketplace. If native plugin installation is unavailable, install the five folders under skills/ in my user-level skills directory. Ask before writing outside the current repository. Verify that all five skills are discoverable, tell me whether I need to restart or open a new chat, and do not run a skill yet.
 ```
 
-## Install manually
+Installation may still require approval for network access or writing to the assistant's configuration directory. Start a new chat after installation.
 
-### Claude Code
+<details>
+<summary>Native command fallback</summary>
+
+#### Codex
+
+```bash
+codex plugin marketplace add rohasnagpal/tokenization-factory-plugin
+codex plugin add tokenization-factory@tokenization-factory-plugin
+```
+
+#### Claude Code
 
 ```text
 /plugin marketplace add rohasnagpal/tokenization-factory-plugin
 /plugin install tokenization-factory@tokenization-factory-plugin
 ```
 
-Skills appear as `/tokenization-factory:project-document`, `/tokenization-factory:launch-kit` and so on. Claude also picks the right skill automatically when you describe what you need.
-
-### Codex CLI
-
-```bash
-git clone https://github.com/rohasnagpal/tokenization-factory-plugin.git
-mkdir -p ~/.codex/skills
-cp -R tokenization-factory-plugin/skills/* ~/.codex/skills/
-```
-
-Restart Codex if the skills don't appear.
+</details>
 
 ### Other assistants
 
-Each skill is a single file at `skills/<name>/SKILL.md`. Copy the folder into your assistant's skills directory, or paste the file's contents into the conversation.
+Copy the folders under `skills/` into the assistant's user-level skills directory. This loads the workflows without plugin listing metadata.
+
+## Start
+
+Open a new chat and say:
+
+```text
+Run the project-document skill for my tokenized asset.
+```
 
 ## Suggested order
 
@@ -52,9 +66,13 @@ Each skill is a single file at `skills/<name>/SKILL.md`. Copy the folder into yo
 
 ## Important
 
-These skills produce drafts and plans. They are not legal, tax or investment advice, an audit, a valuation, or an approval of any offering. A token does not by itself transfer legal ownership of an asset. Promoting or trading tokens that carry investment rights is regulated in most countries — have a qualified lawyer review anything you publish or any venue you use.
+These skills produce drafts and plans. They are not legal, tax or investment advice, an audit, a valuation, or approval of an offering. A token does not by itself transfer legal ownership of an asset. Promotion, offering and trading may be regulated depending on the token's rights and the relevant jurisdictions. Have qualified counsel review public communications, offering activity and trading arrangements.
 
 Never share your private key or seed phrase with an AI assistant, Sara or anyone else.
+
+## Data and permissions
+
+This is a skills-only plugin. It contains instructions and image assets, with no MCP server, account connection, executable code, lifecycle hooks or telemetry. The plugin does not send conversations to Sara. Conversations remain subject to the terms and data practices of the AI assistant you use.
 
 ## License
 

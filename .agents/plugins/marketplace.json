@@ -1,0 +1,20 @@
+{
+  "name": "tokenization-factory-plugin",
+  "interface": {
+    "displayName": "Sara Tokenization Factory"
+  },
+  "plugins": [
+    {
+      "name": "tokenization-factory",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/rohasnagpal/tokenization-factory-plugin"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Finance"
+    }
+  ]
+}

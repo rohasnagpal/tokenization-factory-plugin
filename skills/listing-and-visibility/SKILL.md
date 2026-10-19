@@ -26,7 +26,7 @@ Produce a prioritised plan that gets a Sara-created token seen and recorded in t
 
 State the token's constraints before recommending anything:
 
-- **Restricted or Managed transfer mode:** only approved wallets can hold or receive the token. A DEX liquidity pool, aggregator or exchange hot wallet is not an approved holder unless the issuer approves that specific address, and approving one effectively opens trading to anyone who can use that venue. **Do not recommend DEX pools for these tokens.** Venues must support allowlisted or permissioned transfers, or the issuer must deliberately approve the venue's addresses after legal advice.
+- **Restricted or Managed transfer mode:** only approved wallets can hold or receive the token. A DEX liquidity pool, router, aggregator or exchange wallet may fail unless every address involved in the transfer path has the required approval. Approving a venue wallet alone does not necessarily make trading work for unapproved users, and omnibus venue custody can obscure beneficial-holder eligibility and register reconciliation. **Do not recommend DEX pools for these tokens.** A venue must support the token's permissioned-transfer design, holder eligibility and recordkeeping requirements, and the issuer must test the full transfer path after legal advice.
 - **Managed powers** (pause, freeze, forced transfer, recovery) must be disclosed to any venue or data platform, because they affect holder risk.
 - **Open transfer mode:** technically tradable anywhere. Whether it *should* be listed depends on the legal analysis in Step 2.
 - **Blockchain:** a venue or platform must support the token's network. Check, never assume, that a named venue supports it today.
@@ -47,9 +47,9 @@ Present the plan in this order, skipping items that do not apply and explaining 
 
 ### A. Record and metadata (do first)
 
-1. **Confirm the contract on the block explorer.** Sara deploys from a controlled, reviewed build. Check whether the explorer shows verified source code for the address; if not, follow that explorer's source-verification process using the build information Sara provides.
-2. **Complete the token profile.** Most explorers let the contract owner submit a logo, website, description and social links, usually after proving control of the deployer or owner wallet with a signed message. Prepare:
-   - logo: square SVG or PNG, at least 256×256 px, transparent background;
+1. **Confirm the contract on the block explorer.** Check whether the explorer shows verified source code for the address. If not, use the explorer's current official verification process and the exact compiler, source and build information supplied for the deployment. Do not claim a source match unless the explorer confirms it.
+2. **Complete the token profile.** Check the explorer's current official process, eligibility rules and proof-of-control method before preparing a submission. Where supported, prepare:
+   - a square logo in the file type, dimensions and size the explorer currently requires;
    - one-sentence description taken from the project document and free of investment language;
    - official website and support contact.
 3. **Publish the contract address on the issuer's own website** so holders can check they have the real token.
@@ -62,7 +62,7 @@ Present the plan in this order, skipping items that do not apply and explaining 
 
 ### C. RWA data and analytics platforms
 
-- **rwa.xyz** tracks tokenized real-world assets and publishes market data on them. Recommend it as a priority visibility target for most Sara projects. Tell the user to check rwa.xyz's current process for adding an asset or issuer, and prepare a submission pack:
+- **RWA.xyz** publishes data on tokenized real-world assets. Evaluate it as a potential visibility target where the project fits its current coverage. Check RWA.xyz's current official onboarding or data-partnership process before stating that submissions are accepted, and prepare a reusable information pack containing:
   - issuer legal name, website and contact;
   - asset class and subcategory;
   - blockchain, contract address and explorer link;

@@ -47,7 +47,7 @@ If the user pushes for a less restrictive mode without a confirmed legal basis, 
 - Do not imply that a token transfers legal title unless the project document confirms the legal instrument that makes it so.
 - For Restricted and Managed tokens, say clearly that transfers are limited to approved wallets.
 - Name the blockchain and include the contract address only from Sara facts, and only in full or clearly truncated form (`0x1234…abcd`) with a full-address link to the block explorer.
-- Add the mode-appropriate disclaimer to every piece. Default, unless the lawyer supplied one: "This is not an offer to sell or a solicitation to buy any security or investment. Tokens may be subject to transfer restrictions and are not available in all jurisdictions."
+- Add the lawyer-approved legend or disclaimer required for the relevant mode, audience and jurisdiction. A generic disclaimer does not determine whether content is legally an offer, solicitation or financial promotion. If no wording has been approved, the following may be used only for **Awareness-only** content: "For general information only. This is not an offer to sell or a solicitation to buy any security or investment. Tokens may be subject to transfer restrictions and are not available in all jurisdictions." Do not release Restricted-audience or Public-promotion content until the required wording is confirmed.
 - Respect platform norms: X/Twitter posts at most 280 characters each; threads 4–7 posts; LinkedIn 120–250 words; no more than two hashtags per post.
 
 ## Step 3 — Deliverables

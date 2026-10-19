@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Sara Tokenization Factory</title>
+  <rect width="512" height="512" rx="112" fill="#1F6B5C"/>
+  <path d="M256 88 392 168v176L256 424 120 344V168Z" fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linejoin="round"/>
+  <path d="M180 204c16-32 48-48 88-48 40 0 72 16 72 48 0 36-32 48-80 60-44 12-72 24-72 56 0 28 28 44 68 44 36 0 68-16 84-44" fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round"/>
+</svg>
