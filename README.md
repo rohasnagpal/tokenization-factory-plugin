@@ -1,6 +1,8 @@
 # Tokenization Factory
 
-AI workflows for issuers using [Sara Tokenization Factory](https://sarawallet.com/tokenize/). The package supports ChatGPT and Codex as a portable Agent Plugin, Claude Code as a native plugin, and other assistants that read `SKILL.md` files.
+Turn a tokenized asset into the documents and operating materials needed to launch and manage it. Tokenization Factory helps you create a comprehensive project document, legally gated launch communications, a listing and visibility plan, a holder-onboarding process, and periodic holder updates—all grounded in your project facts and source materials.
+
+It is designed for issuers creating tokens with [Sara Tokenization Factory](https://sarawallet.com/tokenize/).
 
 | Skill | What it does |
 |---|---|
