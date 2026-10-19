@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tokenization-factory",
-  "version": "1.1.0",
-  "description": "Skills for issuers using Sara Tokenization Factory: project documentation, launch communications, listing and visibility, holder onboarding, and holder updates.",
+  "version": "1.2.0",
+  "description": "Skills for issuers using Sara Tokenization Factory: say \"Hi Sara\" with your token link, then build the project document, launch kit, listing and visibility plan, holder onboarding and holder updates.",
   "author": {
     "name": "Sara DAO",
     "url": "https://sarawallet.com/tokenize/"
@@ -32,16 +32,16 @@
         ],
         "websiteURL": "https://sarawallet.com/tokenize/",
         "defaultPrompt": [
+          "Hi Sara — here is my token: https://sarawallet.com/tokenize/token/<contract-address>.json",
           "Create the project document for my tokenized asset.",
-          "Assess promotion constraints and build a launch kit for my token.",
-          "Design a holder-onboarding workflow for my token."
+          "Assess promotion constraints and build a launch kit for my token."
         ],
         "brandColor": "#1F6B5C",
         "composerIcon": "./assets/icon.svg",
         "logo": "./assets/logo.svg"
       },
       "publication": {
-        "release_notes": "Initial public release of five issuer workflows, with portable ChatGPT and Codex packaging and Claude Code marketplace support."
+        "release_notes": "Adds the hi-sara entry skill and support for Sara token record URLs across all workflows."
       }
     }
   }

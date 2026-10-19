@@ -1,10 +1,19 @@
 {
   "name": "tokenization-factory",
-  "version": "1.1.0",
-  "description": "Skills for issuers using Sara Tokenization Factory: project document, launch kit, listing and visibility plan, holder onboarding and holder updates.",
-  "author": { "name": "Sara DAO", "url": "https://sarawallet.com/tokenize/" },
+  "version": "1.2.0",
+  "description": "Skills for issuers using Sara Tokenization Factory: say \"Hi Sara\" with your token link, then build the project document, launch kit, listing and visibility plan, holder onboarding and holder updates.",
+  "author": {
+    "name": "Sara DAO",
+    "url": "https://sarawallet.com/tokenize/"
+  },
   "homepage": "https://sarawallet.com/tokenize/",
   "repository": "https://github.com/rohasnagpal/tokenization-factory-plugin",
   "license": "MIT",
-  "keywords": ["tokenization", "rwa", "real-world-assets", "erc20", "sara"]
+  "keywords": [
+    "tokenization",
+    "rwa",
+    "real-world-assets",
+    "erc20",
+    "sara"
+  ]
 }

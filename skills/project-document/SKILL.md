@@ -11,6 +11,10 @@ Create one self-contained HTML file for a Sara Tokenization Factory project. The
 
 Do not create a collection of documents. Do not create Markdown, PDF, Word, CSS, JavaScript, image, or data files alongside the HTML. Embed all styles in the HTML.
 
+## Sara token record
+
+If the user gives a Sara token record URL (`https://sarawallet.com/tokenize/token/<contract>.json`) or a contract address, fetch the record and prefill every on-chain fact from it: token name, symbol, decimals, supply, transfer mode, enabled powers, network, chain ID, contract address, issuer wallet, deployment transaction, block, date and explorer links. Do not ask for these again. Cite it as "[Sara token record, retrieved {retrieved_at}]". The record contains technical facts only; it does not establish ownership, value, regulatory status or compliance, and it does not contain the issuer's project name or asset details. If you cannot fetch URLs, ask the user to paste the JSON. The `hi-sara` skill describes the record in full.
+
 ## Working rules
 
 1. Treat data exported or copied from Sara as technical deployment facts only. Do not infer legal ownership, regulatory status, value, investor eligibility, enforceability, or compliance from payment, configuration, deployment, a wallet signature, or a blockchain record.

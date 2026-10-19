@@ -9,6 +9,10 @@ Produce launch communications for a token created with Sara Tokenization Factory
 
 A public post about a token that represents ownership, profit, revenue, debt or other economic rights can be an offer or promotion of a regulated investment. Publishing it can break the conditions of an exemption the issuer depends on (for example, a ban on general solicitation) or breach financial-promotion rules. The gate below exists to stop that. Never skip it to be helpful.
 
+## Sara token record
+
+If the user gives a Sara token record URL (`https://sarawallet.com/tokenize/token/<contract>.json`) or a contract address, fetch the record and prefill every on-chain fact from it: token name, symbol, decimals, supply, transfer mode, enabled powers, network, chain ID, contract address, issuer wallet, deployment transaction, block, date and explorer links. Do not ask for these again. Cite it as "[Sara token record, retrieved {retrieved_at}]". The record contains technical facts only; it does not establish ownership, value, regulatory status or compliance, and it does not contain the issuer's project name or asset details. If you cannot fetch URLs, ask the user to paste the JSON. The `hi-sara` skill describes the record in full.
+
 ## Inputs
 
 1. **The project document** produced by the `project-document` skill. Ask for it first. If it does not exist, offer to run that skill, or proceed only with facts the user states directly and mark every claim as unverified.
