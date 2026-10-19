@@ -1,0 +1,15 @@
+{
+  "name": "tokenization-factory-plugin",
+  "owner": {
+    "name": "Sara AI LLC",
+    "url": "https://sarawallet.com/tokenize/"
+  },
+  "description": "Sara Tokenization Factory skills for asset issuers.",
+  "plugins": [
+    {
+      "name": "tokenization-factory",
+      "source": "./",
+      "description": "Skills for issuers using Sara Tokenization Factory: project document, launch kit, listing and visibility plan, holder onboarding and holder updates."
+    }
+  ]
+}
