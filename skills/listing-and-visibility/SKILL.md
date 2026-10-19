@@ -18,7 +18,7 @@ Produce a prioritised plan that gets a Sara-created token seen and recorded in t
 
 ## Sara token record
 
-If the user gives a Sara token record URL (`https://sarawallet.com/tokenize/token/<contract>.json`) or a contract address, fetch the record and prefill every on-chain fact from it: token name, symbol, decimals, supply, transfer mode, enabled powers, network, chain ID, contract address, issuer wallet, deployment transaction, block, date and explorer links. Do not ask for these again. Cite it as "[Sara token record, retrieved {retrieved_at}]". The record contains technical facts only; it does not establish ownership, value, regulatory status or compliance, and it does not contain the issuer's project name or asset details. If you cannot fetch URLs, ask the user to paste the JSON. The `hi-sara` skill describes the record in full.
+If the user gives a Sara token record URL (`https://sarawallet.com/tokenize/token/<contract>.json`) or a contract address, fetch the record and prefill the project name (`project.name`) and every on-chain fact from it: token name, symbol, decimals, supply, transfer mode, enabled powers, network, chain ID, contract address, issuer wallet, deployment transaction, block, date and explorer links. Do not ask for these again. Cite it as "[Sara token record, retrieved {retrieved_at}]". The record contains technical facts only; it does not establish ownership, value, regulatory status or compliance. Apart from the project name, it does not contain the issuer's asset or project details. If you cannot fetch URLs, ask the user to paste the JSON. The `hi-sara` skill describes the record in full.
 
 ## Inputs
 

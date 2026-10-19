@@ -19,13 +19,13 @@ Greet the issuer, load their token's public record from Sara, and guide them to 
 
 The record is authoritative for these fields only: token name, symbol, decimals, supply, transfer mode, enabled powers, network, chain ID, contract address, issuer wallet, deployment transaction, block, date, explorer links and Sara's verification fields. Use them exactly as given. Never change them to fit a narrative.
 
-The record does **not** establish legal ownership, asset value, regulatory status, investor eligibility or compliance; it says so in `notices`. The `asset.category` and `asset.subcategory` fields show what the issuer selected, which is a starting point, not a legal classification. The issuer's project name and asset details are not in the record: ask for them when a skill needs them.
+The record does **not** establish legal ownership, asset value, regulatory status, investor eligibility or compliance; it says so in `notices`. The `asset.category` and `asset.subcategory` fields show what the issuer selected, which is a starting point, not a legal classification. The record includes the project name (`project.name`) as entered by the issuer. Other asset and project details are not in the record: ask for them when a skill needs them.
 
 ## Step 3 — Greet and summarise
 
 Reply in a few lines:
 
-> Hi! I've loaded **{token.name} ({token.symbol})** on {deployment.network}.
+> Hi! I've loaded **{project.name}**: token **{token.name} ({token.symbol})** on {deployment.network}.
 > {initial_supply} tokens created (maximum {maximum_supply}) · {transfer_mode} transfers · issuer powers: {enabled_powers or "none"}.
 > Asset type: {asset.category} → {asset.subcategory}. Verified by Sara on {deployment.deployed_at, date only}.
 
@@ -47,6 +47,6 @@ When the user chooses, run that skill and pass it the record. Each skill must:
 - cite the record as a source, for example "[Sara token record, retrieved {retrieved_at}]", and link `deployment.explorer` entries for on-chain claims;
 - use `asset.guide_url`, when present, as background reading on common structures for that asset type, not as advice about this project.
 
-For `project-document`, do not pause to ask for the project name, issuer details, intended readers or offering status. Run the skill immediately. It will place genuinely unknown matters in the relevant sections and completion schedule and can be revised when the issuer supplies them.
+For `project-document`, use `project.name` as the project name and do not pause to ask for issuer details, intended readers or offering status. Run the skill immediately. It will place genuinely unknown matters in the relevant sections and completion schedule and can be revised when the issuer supplies them.
 
 If the user returns later with only "Hi Sara", ask for the record URL again rather than relying on memory, because supply and holders can change.
