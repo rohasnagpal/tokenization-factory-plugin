@@ -44,9 +44,28 @@ Accept any Sara project details supplied by the user, including:
 - transfer mode and enabled contract powers;
 - issuer wallet;
 - blockchain, chain ID, contract address and deployment transaction;
-- build or manifest hashes and explorer links.
+- build or manifest hashes and explorer links; and
+- photographs or other images of the asset supplied as chat attachments, together with any caption, date, source, photographer, location and permitted-use information the user provides.
 
 Validate internal consistency. Flag mismatched chains, wallet addresses, token supply figures, contract addresses, dates, or powers. Never modify a supplied on-chain fact merely to make the narrative consistent.
+
+## Asset photographs
+
+Treat an image supplied in the chat as source material, not as proof of the proposition it appears to show. Describe only visible features that can be observed reliably. Do not infer ownership, title, authenticity, identity, location, date, condition beyond what is visible, absence of defects, regulatory compliance or value from a photograph alone. Distinguish the user's description of the image from your own observations.
+
+For each supplied image used in the document:
+
+- assign a source ID and record it in the source and evidence register;
+- state that it was supplied by the user in the chat and record the supplied caption, date, author or photographer, location and usage rights when known;
+- use a neutral caption and useful alt text, cross-reference the relevant asset section, and label material uncertainties or conflicts;
+- state that the image is illustrative unless its evidential status has been independently established; and
+- do not expose faces, identity documents, addresses, licence plates, precise location data or other unnecessary personal or security-sensitive details. Redact or omit them when the available tools permit reliable redaction; otherwise do not embed the image and record why.
+
+Embed a supplied image only when the environment provides access to its original bytes and the user has supplied it for use in the document. Use an inline `data:image/...;base64,...` URL so the HTML remains one portable file. Never use a temporary chat attachment URL, local filesystem path, `blob:` URL or remote image URL. Do not reconstruct, approximate, generate or substitute an image when the original bytes are unavailable.
+
+When image-processing tools are available, resize an unnecessarily large image to a sensible document resolution, use an appropriate web format and remove non-essential metadata, including GPS and device metadata, before embedding. Do not crop or alter content in a way that could misrepresent the asset. Record in the caption or source register that the embedded copy was resized, converted, redacted or otherwise processed. Base64 encoding increases file size, so include only images that materially assist identification, condition review or explanation.
+
+If the original bytes are unavailable, embedding would create an unsafe or impractically large file, usage rights are unclear, or reliable redaction is not possible, do not block the draft. Include a source-register entry stating **Image supplied in chat — not embedded**, the reason, and any reliable observations. Add a specific open item only when the missing image or permission materially affects completion of the document.
 
 ## Draft-first method
 
@@ -357,7 +376,8 @@ The file must:
 - include a visible version, document date and information cut-off date;
 - use restrained professional typography and high-contrast colours;
 - render cleanly on screen and in print;
-- avoid remote fonts, scripts, images and stylesheets;
+- avoid remote fonts, scripts, images and stylesheets; asset photographs may appear only as inline Base64 `data:image/...` URLs under the Asset photographs rules;
+- place embedded asset photographs in semantic `<figure>` elements with `<figcaption>`, useful `alt` text, responsive sizing and print-safe page-break treatment;
 - repeat table headers when tables cross pages;
 - prevent headings from being stranded at page bottoms;
 - avoid splitting important cards, signature blocks and short tables;
@@ -412,4 +432,6 @@ Before returning the HTML:
 - confirm that every TOC link resolves to a unique section ID;
 - confirm that HTML tags are balanced and tables have headings;
 - confirm that print CSS contains A4 sizing, page counters and page-break controls;
+- confirm that every embedded image uses an inline `data:image/...;base64,...` URL, has a source-register entry, caption and alt text, and contains no unnecessary sensitive metadata where the available tools permit metadata inspection or removal;
+- confirm that no attachment, local, `blob:` or remote URL is used for an asset photograph and that any supplied image not embedded is identified with the reason;
 - confirm that the output is exactly one self-contained HTML file.
