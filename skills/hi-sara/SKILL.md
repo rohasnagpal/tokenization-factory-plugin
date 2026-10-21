@@ -34,10 +34,11 @@ Then offer the menu below. Recommend **Project document** first if the user has 
 | # | Task | Skill |
 |---|---|---|
 | 1 | Create the complete project legal-document pack now: legal structure, holder rights, risks, sources, schedules and TOC, as one print-ready file | `project-document` |
-| 2 | Plan how to bring in holders and approve their wallets | `holder-onboarding` |
-| 3 | Get the token seen: explorer profile, wallets, rwa.xyz, marketplaces | `listing-and-visibility` |
-| 4 | Launch posts, press note and holder FAQ, within what the law allows | `launch-kit` |
-| 5 | Updates, payout notices and event notices for holders | `holder-updates` |
+| 2 | Calculate an evidence-based indicative asset valuation range and, where supportable, an attributable amount per token | `asset-valuation` |
+| 3 | Plan how to bring in holders and approve their wallets | `holder-onboarding` |
+| 4 | Get the token seen: explorer profile, wallets, rwa.xyz, marketplaces | `listing-and-visibility` |
+| 5 | Launch posts, press note and holder FAQ, within what the law allows | `launch-kit` |
+| 6 | Updates, payout notices and event notices for holders | `holder-updates` |
 
 ## Step 4 — Hand off
 

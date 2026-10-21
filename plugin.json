@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tokenization-factory",
-  "version": "1.3.0",
-  "description": "Skills for issuers using Sara Tokenization Factory: say \"Hi Sara\" with your token link, then build the project document, launch kit, listing and visibility plan, holder onboarding and holder updates.",
+  "version": "1.4.0",
+  "description": "Skills for issuers using Sara Tokenization Factory: build the project document, prepare an indicative asset valuation, plan launch and visibility, onboard holders and create holder updates.",
   "author": {
     "name": "Sara DAO",
     "url": "https://sarawallet.com/tokenize/"
@@ -22,11 +22,12 @@
       "interface": {
         "displayName": "Tokenization Factory",
         "shortDescription": "Tokenization issuer workflows",
-        "longDescription": "Create evidence-based tokenization project documents, launch materials, listing and visibility plans, holder-onboarding workflows, and holder updates. Intended for issuers using Sara Tokenization Factory. Outputs are drafts and plans, not legal, tax, investment, audit, valuation, or offering advice.",
+        "longDescription": "Create evidence-based tokenization project documents, indicative asset valuations, launch materials, listing and visibility plans, holder-onboarding workflows, and holder updates. Intended for issuers using Sara Tokenization Factory. Outputs are drafts, plans and analytical estimates, not legal, tax, investment, audit, independent valuation, or offering advice.",
         "developerName": "Sara DAO",
         "category": "Finance",
         "capabilities": [
           "Draft tokenization documents",
+          "Prepare indicative asset valuations",
           "Plan holder onboarding",
           "Prepare issuer communications"
         ],
@@ -34,6 +35,7 @@
         "defaultPrompt": [
           "Hi Sara — here is my token: https://sarawallet.com/tokenize/token/<contract-address>.json",
           "Create the complete project legal-document pack for my tokenized asset now, with a linked table of contents. Mark missing facts as open items rather than stopping to ask questions.",
+          "Calculate an evidence-based indicative valuation range for my asset and show the assumptions, methods, sensitivities and attributable amount per token if supportable.",
           "Assess promotion constraints and build a launch kit for my token."
         ],
         "brandColor": "#1F6B5C",
@@ -41,7 +43,7 @@
         "logo": "./assets/logo.svg"
       },
       "publication": {
-        "release_notes": "Makes project-document draft-first: it now creates the complete print-ready legal-document pack and TOC immediately, while recording missing issuer facts as open items for later revision."
+        "release_notes": "Adds an asset-valuation skill that calculates transparent indicative valuation ranges, sensitivities and attributable per-token amounts where the legal and economic inputs support them."
       }
     }
   }
