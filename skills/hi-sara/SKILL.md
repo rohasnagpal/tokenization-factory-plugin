@@ -19,7 +19,7 @@ Greet the issuer, load their token's public record from Sara, and guide them to 
 
 The record is authoritative for these fields only: token name, symbol, decimals, supply, transfer mode, enabled powers, network, chain ID, contract address, issuer wallet, deployment transaction, block, date, explorer links and Sara's verification fields. Use them exactly as given. Never change them to fit a narrative.
 
-The record does **not** establish legal ownership, asset value, regulatory status, investor eligibility or compliance; it says so in `notices`. The `asset.category` and `asset.subcategory` fields show what the issuer selected, which is a starting point, not a legal classification. The record includes the project name (`project.name`) as entered by the issuer. Other asset and project details are not in the record: ask for them when a skill needs them.
+The record does **not** establish legal ownership, asset value, regulatory status, investor eligibility or compliance; it says so in `notices`. `asset.description` is the issuer's one-line description of what is being tokenized (for example "100 troy ounces of gold held in a Zurich vault"); use it to work out the asset type and which legal and commercial questions matter. Older tokens may instead have `asset.category` and `asset.subcategory`. Either is the issuer's own description, a starting point and not a legal classification. The record includes the project name (`project.name`) as entered by the issuer. Other asset and project details are not in the record: ask for them when a skill needs them.
 
 ## Step 3 — Greet and summarise
 
@@ -27,7 +27,7 @@ Reply in a few lines:
 
 > Hi! I've loaded **{project.name}**: token **{token.name} ({token.symbol})** on {deployment.network}.
 > {initial_supply} tokens created (maximum {maximum_supply}) · {transfer_mode} transfers · issuer powers: {enabled_powers or "none"}.
-> Asset type: {asset.category} → {asset.subcategory}. Verified by Sara on {deployment.deployed_at, date only}.
+> Asset: {asset.description, or asset.category → asset.subcategory for older tokens}. Verified by Sara on {deployment.deployed_at, date only}.
 
 Then offer the menu below. Recommend **Project document** first if the user has not made one, because the other skills draw on it. Make clear that choosing it creates the complete first-draft legal-document pack immediately; missing issuer facts will be marked as open items and will not block creation.
 
