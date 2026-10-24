@@ -22,7 +22,7 @@ Do not silently choose a basis that changes the meaning of the result. If the us
 
 If the user provides a Sara token record URL (`https://sarawallet.com/tokenize/token/<contract>.json`) or contract address, fetch the record and use its project name and on-chain facts. Cite it as `[Sara token record, retrieved {retrieved_at}]`. The record does not establish the asset's identity, ownership, condition, value, legal rights or regulatory status.
 
-For any per-token figure, use `live.current_supply` (tokens in circulation at `live.checked_at`) when present, otherwise `token.initial_supply`, and say which. A `null` `token.maximum_supply` means the issuer can mint without limit, so there is no fixed denominator: state that a per-token figure can be diluted by future minting. `issuer_profile.valuation_usd` is the issuer's own stated valuation, not evidence: note it, but do not adopt it.
+The valuation is for the whole asset. Token figures from the record matter only for the optional per-token bridge below: `token.maximum_supply` is the fully diluted token count when it is a number; `live.current_supply` (at `live.checked_at`, when present) or `token.initial_supply` is the supply issued so far. A `null` `token.maximum_supply` means the issuer can mint without limit, so there is no fully diluted count: calculate a per-token amount on the issued supply only if the legal terms tie each token to a fixed quantity of the asset (for example 1 token = 1 gram, minted only against deposits), and say so; otherwise explain why no per-token amount is supportable. `issuer_profile.valuation_usd` is the issuer's own stated valuation, not evidence: note it, but do not adopt it.
 
 ## Evidence and input discipline
 
