@@ -13,7 +13,24 @@ Do not create a collection of documents. Do not create Markdown, PDF, Word, CSS,
 
 ## Sara token record
 
-If the user gives a Sara token record URL (`https://sarawallet.com/tokenize/token/<contract>.json`) or a contract address, fetch the record and prefill the project name (`project.name`) and every on-chain fact from it: token name, symbol, decimals, supply, transfer mode, enabled powers, network, chain ID, contract address, issuer wallet, deployment transaction, block, date and explorer links. Do not ask for these again. Cite it as "[Sara token record, retrieved {retrieved_at}]". The record contains technical facts only; it does not establish ownership, value, regulatory status or compliance. Apart from the project name, it does not contain the issuer's asset or project details. If you cannot fetch URLs, ask the user to paste the JSON. The `hi-sara` skill describes the record in full.
+If the user gives a Sara token record URL (`https://sarawallet.com/tokenize/token/<contract>.json`) or a contract address, fetch the record and prefill the project name (`project.name`) and every on-chain fact from it: token name, symbol, decimals, supply, transfer mode, enabled powers, network, chain ID, contract address, issuer wallet, deployment transaction, block, date and explorer links. Do not ask for these again. Cite it as "[Sara token record, retrieved {retrieved_at}]". The record contains technical facts only; it does not establish ownership, value, regulatory status or compliance. Apart from the project name, the asset description and the issuer's public profile (`issuer_profile`, written by the issuer and not verified by Sara), it does not contain the issuer's asset or project details. A `null` `token.maximum_supply` means no maximum, not missing data. Describe each enabled power using `token.enabled_powers_meaning`; a power not listed does not exist in the contract. If you cannot fetch URLs, ask the user to paste the JSON. The `hi-sara` skill describes the record in full.
+
+### Reading the token fields (describe contract powers exactly as below)
+
+- `token.maximum_supply`: `null` means **no maximum**; the issuer can mint any amount. It does not mean the value is missing. A number with `mint` enabled caps the tokens in circulation at any one time, so burned tokens free up room; without `mint`, the supply is fixed at creation. `token.maximum_supply_meaning` states which applies.
+- `token.enabled_powers`: the contract powers that exist for this token. Describe them using `token.enabled_powers_meaning` when present, otherwise:
+  - `mint`: the issuer wallet can create new tokens and send them to any wallet allowed to hold the token.
+  - `burn`: each holder, including the issuer, can destroy tokens in their own wallet. No one can burn tokens held by others.
+  - `pause`: the issuer wallet can halt all transfers between every wallet, and resume them.
+  - `approve_holders`: only wallets the issuer approves can hold or receive the token.
+  - `freeze_holders`: the issuer wallet can stop one specific wallet from sending or receiving, without affecting others.
+  - `forced_transfer`: the issuer wallet can move tokens out of any holder's wallet into another approved wallet without the holder's signature.
+  - `wallet_recovery`: the issuer can freeze a lost wallet and move its full balance to the holder's new approved wallet.
+  A power not listed does not exist in the contract and can never be added, because the contract is not upgradeable.
+- `token.transfer_mode` and `token.transfer_mode_meaning`: `open`, `restricted` (approved wallets only) or `managed` (approved wallets plus issuer controls).
+- `live` (when present): current supply, whether transfers are paused, and the holder count, read from the contract at `live.checked_at`. Use it for current figures; `token.initial_supply` is the supply at creation.
+- `issuer_profile` (when present): the issuer's public description, website, X account, project document link, how to become a holder, and current stated valuation. It is written by the issuer and not verified by Sara: treat it as the issuer's statements, never as established fact. The description may contain basic HTML.
+
 
 ## Working rules
 
